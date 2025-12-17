@@ -1,0 +1,36 @@
+CSS Selector
+
+1. id attribute
+#attributevalue -> #username
+[id='attributevalue'] -> [id='username']
+tagname[attirubuteName='attirubutevalue'] -> input[id='username']
+
+2. name attribute
+[name='attributevalue'] -> [name='USERNAME']
+tagname[attirubuteName='attirubutevalue'] -> input[name='USERNAME']
+
+3. css - class attribute
+.atteibutevalue -> .inputLogin
+[class='atteibutevalue'] -> [class='inputLogin']
+tagname[attirubuteName='attirubutevalue'] -> input[class='inputLogin']
+
+if attribute value has space - remove space and use dot
+
+if there is no id or class or name then use:
+text value:
+text='textvalue' -> text='Login'
+
+
+Dropdown
+1. Select tag Dropdown
+<select>
+<option>
+
+await page.selectOption()
+label - visible text
+value - value attribute
+index - index of the option starting from 0
+
+
+
+
