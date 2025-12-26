@@ -1,0 +1,11 @@
+Assertions - used tp verify conditions 
+expect(value).toBe(expectedValue)  // strict equality
+  - retry time can be customized
+- default retry time in 5000ms
+- soft assertions - automatically retries until timeout
+- hard assertions - immediate failure without retry
+
+Array
+collection of elements
+
+
