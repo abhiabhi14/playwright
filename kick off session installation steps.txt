@@ -1,0 +1,57 @@
+
+Node JS
+run time env to run java script
+background that makes java works on playwright
+npm
+tool for managing java packages
+
+
+Visual Studio code - developed by MS
+open source, free, versatile
+lightweight design
+
+command to install playwright in terminal
+npm init playwright@latest
+
+Kick off session steps 
+Document - https://sway.cloud.microsoft/LGNPDAAjd09MoGBV?ref=Link
+
+1. Install node js
+2. Install visual studio code
+3. Create a new folder in file explorer
+4. Launch VS
+5. Open the folder in Visual Studio Code (VSCode)
+Navigate to File > Open Folder. Select and open the previously created folder.
+6. Open terminal - view>terminal
+7. Install playwright
+In the terminal, execute the command `npm init playwright@latest`.
+When prompted, opt for TypeScript by pressing Enter 
+- For the question: "Where to put your end-to-end tests?" just press Enter to keep the
+default "tests" option.
+- Similarly, respond with "Y" to: "Install Playwright browsers (can be done manually via
+'npx playwright install')?" and press Enter.
+8. Create a New File:
+- Open a new file by selecting "File" from the menu, then choosing "New File."
+9. Save the file with a meaningful name and the appropriate file extension (e.g.,launch-
+browser.spec.ts).
+10. Copy and Paste the Code:
+
+- Copy the provided Playwright test code:
+
+import { chromium, test } from "@playwright/test";
+
+test("To launch a browser", async () => {
+
+const browserInstance = await chromium.launch({ headless: false, channel:
+"chrome" });
+
+const browserContext = await browserInstance.newContext();
+
+const page = await browserContext.newPage();
+
+await page.goto("http://leaftaps.com/opentaps/control/main");
+
+});
+11. Save 
+12.  Run the following command to execute the Playwright test:
+npx playwright test launch-browser.spec.ts
