@@ -1,5 +1,3 @@
-
-
 import { chromium, test } from "@playwright/test";
 
 //default nature browser-headless: true
@@ -15,4 +13,4 @@ const page = await browserContext.newPage();
 await page.goto("http://leaftaps.com/opentaps/control/main");
 
 await page.waitForTimeout(5000);
-});
+})

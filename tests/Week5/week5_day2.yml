@@ -1,0 +1,16 @@
+Test Annotation - configure behavior of test
+test.only - to run this particular testcase
+test.use - used in storage state - override context
+test.skip - it will not come for execution
+test.fail - mark test as expected to fail
+test.fixme - it will not execute in cases when dev or data issue - code needs to be fixed
+test.info - give information inside test function
+
+Hooks
+These are special methods in playwright that are used to setup 
+and tear down test environments
+
+types
+beforeAll
+afterAll
+

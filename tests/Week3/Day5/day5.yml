@@ -1,0 +1,61 @@
+//xpath
+1. absolute xpath - like trains stops at all stations before destination
+/html/body/div[2]/div/div[2]/div[2]/div/div/div
+
+2. relative xpath - like express train stops only at important stations before destination
+//tagname[@attribute='attributevalue']
+//div[@class='example'][1]
+2 types of relative xpath:
+a. basic xpath - attribute based - id, name and class
+//tagname[@attribute='attributevalue']
+//input[@id='username']
+b. text based
+//tagname[text()='textvalue']
+c.partial attribute based - contains()
+//tagname[contains(@attribute,'attributevalue')]
+//input[contains(@id,'user')]
+d. partial attribute based - contains()
+//tagname[contains(text(),'textvalue')]
+//span[contains(text(),'Forgot')]
+
+3. Collection Xpath or index based - index value starts from 1 upto 5
+(//tagname[@attribute='attributevalue'])[indexvalue]
+(//input[@class='inputtext'])[2]
+
+Advanced Xpath:
+- used when there is no unique attribute to identify an element
+1. Parent to child traversal - single slash /
+parent xpath/tagname of child
+//div[@class='example']/input
+2. Grand parent to child traversal - double slash //
+grand parent xpath//tagname of child
+//div[@class='example']//input
+3. Child to parent traversal - double dot ..
+child relative xpath/parent::parenttagname
+//input[@id='username']/parent::div
+4. Grand child to grand parent traversal 
+grand child relative xpath/ancestor::grandparenttagname
+//input[@id='username']/ancestor::div
+5. Elder sibling to younger sibling traversal - following-sibling::
+elder sibling relative xpath/following-sibling::younger sibling tagname
+//label[text()='Username']/following-sibling::input
+6. Younger sibling to elder sibling traversal - preceding-sibling::
+younger sibling relative xpath/preceding-sibling::elder sibling tagname
+//input[@id='username']/preceding-sibling::label
+7.Elder cousin to younger cousin traversal - following::
+elder cousin relative xpath/following::younger cousin tagname
+//label[text()='Username']/following::input[@id='password']
+8. Younger cousin to elder cousin traversal - preceding::
+younger cousin relative xpath/preceding::elder cousin tagname
+//input[@id='password']/preceding::label[@for='username']
+
+Playwright Locators
+1. getby role
+2. getby label
+3. getby placeholder
+4. getby text 
+5. getby alttext
+6. getby title
+7. getby testid
+
+await page.getByRole('text',{name:"username"}).fill("Demosalesmanager")

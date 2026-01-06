@@ -1,0 +1,77 @@
+
+Data Parameterization - csv
+Data Parameterization - json
+Data Parameterization - env file
+
+1. Data Parameterization - csv
+CSV - comma separated values
+test1,test2,test3...
+
+csv
+step 1 - install csv-parse
+npm install csv-parse
+
+step 2 - use parse() - import from csv - parse/sync
+parse(pathofthefile)
+
+step 3 - install fs - file system
+npm install fs
+
+each row will be considered as one test
+
+
+steps
+npm install csv-parse
+npm install fs
+create a data folder in workspace
+create a filea.csv
+
+2. Data Parameterization - json
+json - java script object notation
+
+key : value
+single set of data: {}
+
+{
+"tcName":"Tc1"
+"Username":"Demosalesmanager"
+"Password":"crmsfa"
+}
+
+multiple set of data: [{},{}]
+[{
+key : value - set 1
+"tcName":"Tc1"
+"Username":"Demosalesmanager"
+"Password":"crmsfa"
+},
+{
+key: value - set 2
+"tcName":"Tc1"
+"Username":"Demosalesmanager"
+"Password":"crmsfa"
+}]
+
+import loginInfor from '../../a.json'
+
+
+3. Data Parameterization - emv file
+single file to read
+step:1  -->install dotenv
+npm install dotenv
+step:2 --> prod.env
+dotenv.config({path:`constants/prod.env`})
+
+Multiple file to read
+const fileTORead=process.env.envFile
+dotenv.config({path:`constants/${fileTORead}.env`})
+
+set the filename
+$env:envFile="staging"
+$env:envFile="QA"
+
+unset
+$env:envFile=""
+
+to know which file is set for execution
+$env:envFile

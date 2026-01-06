@@ -1,0 +1,35 @@
+create a file a.ts
+code
+run in terminal - tsc a.ts
+a file a.js is created
+run in terminal - node a.js
+
+
+Alerts
+-event driven architecture
+
+modal Alerts
+1. simple Alert - acknowlegment
+only 1 button
+2.Confirmation Alert
+has options to access or dismiss
+3.prompt Alert
+asks user input
+
+Non modal alert
+1. sweet Alert
+can be inspected and interacted
+
+actions allowed in playwright
+dialog.accept(); - to accept 
+dialog.dismiss(); - to cancel
+dialog.message(); - get message
+dialog.accept("text"); - to give einput
+
+
+Frame
+DOM inside another DOM
+iframe 
+
+single Frame
+nested Frame
